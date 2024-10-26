@@ -45,12 +45,31 @@
   }
 </style>
 
-<!-- Dark Mode Button -->
-<button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background-color: transparent; cursor: pointer; font-size: 20px;">
-  🌙
+
+<!-- Dark Mode Toggle Button -->
+<button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background: transparent; cursor: pointer;">
+  <span id="icon" style="display: inline-block; width: 20px; height: 20px; border-radius: 50%; background-color: #FFD700;"></span>
 </button>
 
 <style>
+  /* Sun (Light Mode) Style */
+  #icon.light-mode {
+    background-color: #FFD700; /* Gold for sun */
+    transition: background-color 0.3s;
+  }
+
+  /* Moon (Dark Mode) Style */
+  #icon.dark-mode {
+    background-color: #4B0082; /* Indigo for moon */
+    transition: background-color 0.3s;
+  }
+
+  /* Hover Effect */
+  #darkModeButton:hover #icon {
+    background-color: #FFA500; /* Orange for hover */
+  }
+
+  /* Dark Mode Styles */
   .dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -60,11 +79,14 @@
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-    const button = document.getElementById("darkModeButton");
+    const icon = document.getElementById("icon");
     if (document.body.classList.contains("dark-mode")) {
-      button.innerHTML = "☀️"; // Sun icon for light mode
+      icon.classList.replace("light-mode", "dark-mode"); // Moon color for dark mode
     } else {
-      button.innerHTML = "🌙"; // Moon icon for dark mode
+      icon.classList.replace("dark-mode", "light-mode"); // Sun color for light mode
     }
   }
+  // Set initial icon style
+  document.getElementById("icon").classList.add("light-mode");
 </script>
+
