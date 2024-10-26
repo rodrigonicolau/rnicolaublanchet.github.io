@@ -20,7 +20,6 @@
 
 <style>
   
-  
 /* Default light mode styles */
   body {
     background-color: #ffffff;
@@ -56,26 +55,27 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    border-radius: 50%;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, transform 0.3s, clip-path 0.3s, box-shadow 0.3s;
   }
 
-  /* Sun Style (Light Mode) */
+  /* Sun Shape (Light Mode) */
   .sun {
     background-color: #FFD700;
-    box-shadow: 0 0 8px #FFD700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: 0 0 5px #FFD700;
   }
 
-  /* Moon Style (Dark Mode) */
+  /* Moon Shape (Dark Mode) */
   .moon {
     background-color: #4B0082;
-    box-shadow: 0 0 8px #4B0082;
+    clip-path: circle(50% at 60% 40%);
+    box-shadow: 0 0 5px #4B0082;
   }
 
   /* Hover Effect */
   #darkModeButton:hover #icon {
-    background-color: #FFA500; /* Orange on hover */
-    box-shadow: 0 0 8px #FFA500;
+    background-color: #FFA500;
+    box-shadow: 0 0 10px #FFA500;
   }
 
   /* Dark Mode Background */
@@ -93,6 +93,7 @@
     icon.classList.toggle("moon");
   }
 
-  // Set initial icon to sun or moon based on system preference
+  // Set initial icon based on system preference
   document.getElementById("icon").classList.add("sun");
 </script>
+
