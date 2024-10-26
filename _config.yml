@@ -1,6 +1,7 @@
 title: "Rodrigo Nicolau Blanchet"
 description: ""
-theme: minima
+theme: jekyll-theme-minimal
+logo: profile.png
 
 show_footer: false
 title: ""
