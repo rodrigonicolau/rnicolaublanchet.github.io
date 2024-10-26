@@ -21,7 +21,7 @@
 
 <!-- Dark Mode Toggle Button -->
 <button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background: transparent; cursor: pointer; font-size: 20px;">
-  <span id="icon">🌙</span>
+  <span id="icon">🌒</span>
 </button>
 
 <style>
@@ -42,7 +42,7 @@
   // Set initial mode based on system preference
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add("dark-mode");
-    document.getElementById("icon").textContent = "☀️";
+    document.getElementById("icon").textContent = "🔆";
   } else {
     document.body.classList.add("light-mode");
   }
@@ -52,6 +52,6 @@
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
     const icon = document.getElementById("icon");
-    icon.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    icon.textContent = document.body.classList.contains("dark-mode") ? "🔆" : "🌒";
   }
 </script>
