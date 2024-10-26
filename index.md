@@ -46,26 +46,75 @@
 </style>
 
 <!-- Fancy Dark Mode Toggle Button -->
-<button onclick="toggleDarkMode()" id="darkModeToggle" style="position: fixed; top: 10px; right: 10px; padding: 10px 20px; border: none; border-radius: 20px; background-color: #333; color: #fff; font-weight: bold; cursor: pointer; transition: all 0.3s;">
-  🌙 Dark Mode
-</button>
+<label class="dark-mode-switch">
+  <input type="checkbox" onclick="toggleDarkMode()" id="darkModeToggle">
+  <span class="slider"></span>
+</label>
 
 <style>
-  /* Button style for light and dark modes */
-  .dark-mode #darkModeToggle {
-    background-color: #eee;
-    color: #333;
+  
+  /* Switch container */
+  .dark-mode-switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+  }
+
+  /* Hide default checkbox */
+  .dark-mode-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* Slider styling */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+  }
+
+  /* Dark mode color */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+
+  /* Slider color when checked */
+  input:checked + .slider {
+    background-color: #333;
+  }
+
+  /* Slider position when checked */
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Dark mode styling */
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
   }
 </style>
 
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-    const button = document.getElementById("darkModeToggle");
-    if (document.body.classList.contains("dark-mode")) {
-      button.innerHTML = "☀️ Light Mode";
-    } else {
-      button.innerHTML = "🌙 Dark Mode";
-    }
   }
 </script>
