@@ -19,37 +19,23 @@
 </style>
 
 
-<style>
-  /* Default light mode styles */
-  body {
-    background-color: #ffffff;
-    color: #000000;
-  }
+<!-- Dark Mode Toggle Button -->
+<button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background: transparent; cursor: pointer; font-size: 20px;">
+  <span id="icon">🌙</span>
+</button>
 
-  /* Dark mode styles, if system preference is dark */
+<style>
+  /* System preference for dark mode */
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #121212;
       color: #ffffff;
     }
+    #icon {
+      content: "☀️"; /* Start with sun icon if dark mode */
+    }
   }
-
-  /* Additional dark mode styling */
-  .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  .dark-mode a {
-    color: #bb86fc;
-  }
-</style>
-
-<!-- Dark Mode Button -->
-<button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background-color: transparent; cursor: pointer; font-size: 20px;">
-  🌙
-</button>
-
-<style>
+  /* Light mode as the default */
   .dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -59,12 +45,18 @@
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-    const button = document.getElementById("darkModeButton");
+    const icon = document.getElementById("icon");
     if (document.body.classList.contains("dark-mode")) {
-      button.innerHTML = "☀️"; // Sun icon for light mode
+      icon.textContent = "☀️"; // Switch to sun for dark mode
     } else {
-      button.innerHTML = "🌙"; // Moon icon for dark mode
+      icon.textContent = "🌙"; // Switch to moon for light mode
     }
+  }
+
+  // Set initial mode based on system preference
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add("dark-mode");
+    document.getElementById("icon").textContent = "☀️";
   }
 </script>
 
