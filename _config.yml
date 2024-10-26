@@ -1,6 +1,6 @@
 title: "Rodrigo Nicolau Blanchet"
 description: "Personal website"
-theme: jekyll-theme-minima
+theme: minima
 
 markdown: kramdown
 # Link to custom CSS
