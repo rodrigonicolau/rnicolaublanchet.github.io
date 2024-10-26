@@ -1,14 +1,19 @@
-<div style="text-align: center; max-width: 600px; margin: 0 auto; padding: 50px 20px;">
-  <!-- Profile Picture -->
-  <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; margin-bottom: 20px;">
+<div style="display: flex; max-width: 800px; margin: 0 auto; padding: 20px;">
+  <!-- Left Column for Profile Picture and Info -->
+  <div style="flex: 0 0 200px; text-align: left;">
+    <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; margin-bottom: 20px;">
+    <h1>Rodrigo Nicolau</h1>
+    <p style="font-size: 1em; color: #555;">Predoctoral Fellow in Economics at the University of Zurich</p>
+  </div>
 
-  <!-- Name and Description -->
-  <h1>Rodrigo Nicolau</h1>
-  <p style="font-size: 1.1em; color: #555;">Predoctoral Fellow in Economics at the University of Zurich</p>
-
-  <!-- Projects Section -->
-  <h2>Projects</h2>
-  <ul style="list-style: none; padding: 0;">
-  
-  </ul>
+  <!-- Right Column for Projects -->
+  <div style="flex: 1; padding-left: 20px;">
+    <h2>Projects</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li><strong>Project 1:</strong> Brief description of Project 1.</li>
+      <li><strong>Project 2:</strong> Brief description of Project 2.</li>
+      <li><strong>Project 3:</strong> Brief description of Project 3.</li>
+    </ul>
+  </div>
 </div>
+
