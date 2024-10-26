@@ -1,3 +1,12 @@
 title: "Rodrigo Nicolau Blanchet"
 description: "Personal website"
 theme: jekyll-theme-minimal
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-seo-tag
+
+# Link to custom CSS
+include:
+  - assets/css/styles.css
