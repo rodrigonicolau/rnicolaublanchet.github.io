@@ -1,10 +1,11 @@
-<div style="text-align: center; max-width: 800px; margin: 0 auto; padding: 20px;">
-  <!-- Name centered above Profile Picture -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 10px; text-align: center;">Rodrigo Nicolau Blanchet </p>
-    <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 20px;">
+<div style="display: flex; justify-content: flex-start; max-width: 800px; margin: 0 auto; padding: 20px;">
+  <!-- Title centered above Profile Picture -->
+  <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 10px;">Rodrigo Nicolau Blanchet</p>
+    <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
   </div>
 </div>
+
 
 <style>
   header {
@@ -42,7 +43,7 @@
   // Set initial mode based on system preference
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add("dark-mode");
-    document.getElementById("icon").textContent = "🔆";
+    document.getElementById("icon").textContent = "☀️";
   } else {
     document.body.classList.add("light-mode");
   }
@@ -52,6 +53,6 @@
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
     const icon = document.getElementById("icon");
-    icon.textContent = document.body.classList.contains("dark-mode") ? "🔆" : "🌒";
+    icon.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌒";
   }
 </script>
