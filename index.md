@@ -18,23 +18,54 @@
   }
 </style>
 
-<!-- Dark Mode Toggle Button -->
-<button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; padding: 5px 10px;">Dark Mode</button>
-
-<script>
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-  }
-</script>
-
-<!-- Dark Mode Styles -->
 <style>
-  body.dark-mode {
+  
+  
+/* Default light mode styles */
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+/* Dark mode styles, if system preference is dark */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  }
+
+/* Additional dark mode styling */
+  .dark-mode {
     background-color: #121212;
     color: #ffffff;
   }
-  body.dark-mode a {
+  .dark-mode a {
     color: #bb86fc;
   }
 </style>
 
+<!-- Fancy Dark Mode Toggle Button -->
+<button onclick="toggleDarkMode()" id="darkModeToggle" style="position: fixed; top: 10px; right: 10px; padding: 10px 20px; border: none; border-radius: 20px; background-color: #333; color: #fff; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+  🌙 Dark Mode
+</button>
+
+<style>
+  /* Button style for light and dark modes */
+  .dark-mode #darkModeToggle {
+    background-color: #eee;
+    color: #333;
+  }
+</style>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const button = document.getElementById("darkModeToggle");
+    if (document.body.classList.contains("dark-mode")) {
+      button.innerHTML = "☀️ Light Mode";
+    } else {
+      button.innerHTML = "🌙 Dark Mode";
+    }
+  }
+</script>
