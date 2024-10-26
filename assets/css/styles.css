@@ -1,0 +1,45 @@
+/* Sidebar layout styling */
+body {
+  display: flex;
+  margin: 0;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar img {
+  border-radius: 50%;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
