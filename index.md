@@ -1,8 +1,9 @@
 <div style="text-align: left; max-width: 800px; margin: 0 auto; padding: 20px;">
   <!-- Name centered above Profile Picture -->
   <div style="display: flex; flex-direction: column; align-items: center;">
-    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 10px; text-align: center;">Rodrigo Nicolau </p>
-    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 10px; text-align: center;">Blanchet </p>
+    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 8px; text-align: center; color: navy; font-family: 'Georgia', serif;">Rodrigo </p>
+    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 8px; text-align: center; color: navy; font-family: 'Georgia', serif;">Nicolau </p>
+    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 8px; text-align: center; color: navy; font-family: 'Georgia', serif;">Blanchet </p>
     <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 20px;">
   </div>
 </div>
