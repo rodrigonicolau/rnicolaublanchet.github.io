@@ -25,20 +25,27 @@
 </button>
 
 <style>
-  /* System preference for dark mode */
+  /* Light Mode (default) */
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Dark Mode Styling */
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  /* System Preference: Dark Mode */
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #121212;
       color: #ffffff;
     }
     #icon {
-      content: "☀️"; /* Start with sun icon if dark mode */
+      content: "☀️";
     }
-  }
-  /* Light mode as the default */
-  .dark-mode {
-    background-color: #121212;
-    color: #ffffff;
   }
 </style>
 
@@ -47,17 +54,15 @@
     document.body.classList.toggle("dark-mode");
     const icon = document.getElementById("icon");
     if (document.body.classList.contains("dark-mode")) {
-      icon.textContent = "☀️"; // Switch to sun for dark mode
+      icon.textContent = "☀️"; // Show sun in dark mode
     } else {
-      icon.textContent = "🌙"; // Switch to moon for light mode
+      icon.textContent = "🌙"; // Show moon in light mode
     }
   }
 
-  // Set initial mode based on system preference
+  // Set default based on system preference
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add("dark-mode");
     document.getElementById("icon").textContent = "☀️";
   }
 </script>
-
-
