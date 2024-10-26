@@ -2,9 +2,9 @@
   <!-- Left Column -->
   <div style="flex: 0 0 200px; padding: 10px;">
     <!-- Profile Image -->
-    <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Your profile picture" width="150" style="border-radius: 50%;">
+    <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg" alt="Your profile picture" width="150" style="border-radius: 50%;">
     <!-- Name -->
-    <h1 style="font-size: 1.5em; margin-top: 10px;">Rodrigo Nicolau</h1>
+    <h1 style="font-size: 1.5em; margin-top: 10px;">Rodrigo Nicolau</h1> 
   </div>
 
   <!-- Right Column (Main Content) -->
