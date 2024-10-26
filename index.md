@@ -50,19 +50,20 @@
 </style>
 
 <script>
+  // Initial setting based on system preference
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.classList.add("dark-mode");
+    document.getElementById("icon").textContent = "☀️";
+  }
+
+  // Toggle function
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
     const icon = document.getElementById("icon");
     if (document.body.classList.contains("dark-mode")) {
-      icon.textContent = "☀️"; // Show sun in dark mode
+      icon.textContent = "☀️"; // Show sun for dark mode
     } else {
-      icon.textContent = "🌙"; // Show moon in light mode
+      icon.textContent = "🌙"; // Show moon for light mode
     }
-  }
-
-  // Set default based on system preference
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.body.classList.add("dark-mode");
-    document.getElementById("icon").textContent = "☀️";
   }
 </script>
