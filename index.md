@@ -9,8 +9,6 @@
   <!-- Projects Section -->
   <h2>Projects</h2>
   <ul style="list-style: none; padding: 0;">
-    <li><strong>Project 1:</strong> Brief description of Project 1.</li>
-    <li><strong>Project 2:</strong> Brief description of Project 2.</li>
-    <li><strong>Project 3:</strong> Brief description of Project 3.</li>
+  
   </ul>
 </div>
