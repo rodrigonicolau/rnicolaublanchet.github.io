@@ -1,10 +1,3 @@
-title: "Rodrigo Nicolau Blanchet"
-description: "Personal website"
+title: "Rodrigo Nicolau"
+description: "Predoctoral Fellow in Economics at the University of Zurich"
 theme: minima
-
-markdown: kramdown
-# Link to custom CSS
-plugins:
-  - jekyll-seo-tag
-include:
-  - assets/css/styles.css
