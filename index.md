@@ -26,44 +26,32 @@
 
 <style>
   /* Light Mode (default) */
-  body {
+  body.light-mode {
     background-color: #ffffff;
     color: #000000;
   }
 
   /* Dark Mode Styling */
-  .dark-mode {
+  body.dark-mode {
     background-color: #121212;
     color: #ffffff;
-  }
-
-  /* System Preference: Dark Mode */
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: #121212;
-      color: #ffffff;
-    }
-    #icon {
-      content: "☀️";
-    }
   }
 </style>
 
 <script>
-  // Initial setting based on system preference
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  // Set initial mode based on system preference
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add("dark-mode");
     document.getElementById("icon").textContent = "☀️";
+  } else {
+    document.body.classList.add("light-mode");
   }
 
-  // Toggle function
+  // Toggle function for light and dark modes
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
     const icon = document.getElementById("icon");
-    if (document.body.classList.contains("dark-mode")) {
-      icon.textContent = "☀️"; // Show sun for dark mode
-    } else {
-      icon.textContent = "🌙"; // Show moon for light mode
-    }
+    icon.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
   }
 </script>
