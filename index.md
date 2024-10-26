@@ -3,3 +3,9 @@
     <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 20px;">
   </div>
 </div>
+
+<style>
+  footer {
+    display: none;
+  }
+</style>
