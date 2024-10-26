@@ -2,8 +2,6 @@
   <!-- Left Column for Profile Picture and Info -->
   <div style="flex: 0 0 200px; text-align: left;">
     <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; margin-bottom: 20px;">
-    <h1>Rodrigo Nicolau Blanchet</h1>
-    <p style="font-size: 1em; color: #555;">Predoctoral Fellow in Economics at the University of Zurich</p>
   </div>
 
   <!-- Right Column for Projects -->
