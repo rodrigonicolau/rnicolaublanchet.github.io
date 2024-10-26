@@ -4,7 +4,7 @@
 
   <!-- Name and Description -->
   <h1>Rodrigo Nicolau</h1>
-  <p style="font-size: 1.1em; color: #555;">Researcher in Public, Development, and Behavioral Economics</p>
+  <p style="font-size: 1.1em; color: #555;">Predoctoral Fellow in Economics at the University of Zurich</p>
 
   <!-- Projects Section -->
   <h2>Projects</h2>
