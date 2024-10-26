@@ -1,12 +1,40 @@
 <div style="text-align: left; max-width: 800px; margin: 0 auto; padding: 20px;">
   <!-- Name centered above Profile Picture -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 8px; text-align: center; color: navy; font-family: 'Georgia', serif;">Rodrigo </p>
-    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 8px; text-align: center; color: navy; font-family: 'Georgia', serif;">Nicolau </p>
-    <p style="font-weight: bold; font-size: 1.8em; margin-bottom: 8px; text-align: center; color: navy; font-family: 'Georgia', serif;">Blanchet </p>
+  <div style="display: flex; flex-direction: column; align-items: flex-start;">
+    <p class="title">Rodrigo</p>
+    <p class="title">Nicolau</p>
+    <p class="title">Blanchet</p>
     <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover; margin-bottom: 20px;">
   </div>
 </div>
+
+<style>
+  /* Title Font and Color */
+  .title {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    color: navy;
+    font-family: 'Arial', sans-serif; /* Replace with desired font */
+  }
+
+  /* Dark Mode Title Color */
+  body.dark-mode .title {
+    color: #ffffff;
+  }
+
+  /* Light and Dark Mode Backgrounds */
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+</style>
+
 
 <style>
   header {
