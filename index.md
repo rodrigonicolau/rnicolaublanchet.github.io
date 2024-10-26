@@ -6,15 +6,6 @@
     <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
   </div>
 
-<div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: left;">
-  <!-- Name and Profile Picture -->
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <p class="title">Rodrigo</p>
-    <p class="title">Nicolau</p>
-    <p class="title">Blanchet</p>
-    <img src="https://github.com/rodrigonicolau/rodrigonicolau.github.io/blob/main/profile.jpg?raw=true" alt="Profile Picture" width="150" style="border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
-  </div>
-
   <!-- Introduction Text -->
   <p> Welcome to my page! I am a Predoctoral Fellow in Economics at the University of Zurich.</p>
 </div>
