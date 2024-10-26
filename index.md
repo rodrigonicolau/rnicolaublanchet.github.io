@@ -45,31 +45,40 @@
   }
 </style>
 
-
 <!-- Dark Mode Toggle Button -->
 <button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background: transparent; cursor: pointer;">
-  <span id="icon" style="display: inline-block; width: 20px; height: 20px; border-radius: 50%; background-color: #FFD700;"></span>
+  <span id="icon" class="sun"></span>
 </button>
 
 <style>
-  /* Sun (Light Mode) Style */
-  #icon.light-mode {
-    background-color: #FFD700; /* Gold for sun */
-    transition: background-color 0.3s;
+  /* Sun and Moon Icon Styling */
+  #icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s, box-shadow 0.3s;
   }
 
-  /* Moon (Dark Mode) Style */
-  #icon.dark-mode {
-    background-color: #4B0082; /* Indigo for moon */
-    transition: background-color 0.3s;
+  /* Sun Style (Light Mode) */
+  .sun {
+    background-color: #FFD700;
+    box-shadow: 0 0 8px #FFD700;
+  }
+
+  /* Moon Style (Dark Mode) */
+  .moon {
+    background-color: #4B0082;
+    box-shadow: 0 0 8px #4B0082;
   }
 
   /* Hover Effect */
   #darkModeButton:hover #icon {
-    background-color: #FFA500; /* Orange for hover */
+    background-color: #FFA500; /* Orange on hover */
+    box-shadow: 0 0 8px #FFA500;
   }
 
-  /* Dark Mode Styles */
+  /* Dark Mode Background */
   .dark-mode {
     background-color: #121212;
     color: #ffffff;
@@ -80,13 +89,10 @@
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
     const icon = document.getElementById("icon");
-    if (document.body.classList.contains("dark-mode")) {
-      icon.classList.replace("light-mode", "dark-mode"); // Moon color for dark mode
-    } else {
-      icon.classList.replace("dark-mode", "light-mode"); // Sun color for light mode
-    }
+    icon.classList.toggle("sun");
+    icon.classList.toggle("moon");
   }
-  // Set initial icon style
-  document.getElementById("icon").classList.add("light-mode");
-</script>
 
+  // Set initial icon to sun or moon based on system preference
+  document.getElementById("icon").classList.add("sun");
+</script>
