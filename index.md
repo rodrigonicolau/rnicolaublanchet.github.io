@@ -18,55 +18,54 @@
   }
 </style>
 
-<style>
-  
-
-<!-- Dark Mode Button -->
-<button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background: transparent; cursor: pointer;">
-  <span id="icon" class="sun-icon"></span>
-</button>
 
 <style>
-  /* Sun and Moon Icon Styling */
-  #icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    transition: all 0.3s;
+  /* Default light mode styles */
+  body {
+    background-color: #ffffff;
+    color: #000000;
   }
 
-  /* Sun Shape (Light Mode) */
-  .sun-icon {
-    background-color: #FFD700;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  /* Dark mode styles, if system preference is dark */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #ffffff;
+    }
   }
 
-  /* Moon Shape (Dark Mode) */
-  .moon-icon {
-    background-color: #4B0082;
-    clip-path: circle(50% at 70% 30%);
-  }
-
-  /* Hover Effect */
-  #darkModeButton:hover #icon {
-    background-color: #FFA500;
-  }
-
-  /* Dark Mode Styling */
+  /* Additional dark mode styling */
   .dark-mode {
     background-color: #121212;
     color: #ffffff;
+  }
+  .dark-mode a {
+    color: #bb86fc;
+  }
+</style>
+
+<!-- Fancy Dark Mode Toggle Button -->
+<button onclick="toggleDarkMode()" id="darkModeToggle" style="position: fixed; top: 10px; right: 10px; padding: 10px 20px; border: none; border-radius: 20px; background-color: #333; color: #fff; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+  🌙 Dark Mode
+</button>
+
+<style>
+  /* Button style for light and dark modes */
+  .dark-mode #darkModeToggle {
+    background-color: #eee;
+    color: #333;
   }
 </style>
 
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-    const icon = document.getElementById("icon");
-    icon.classList.toggle("sun-icon");
-    icon.classList.toggle("moon-icon");
+    const button = document.getElementById("darkModeToggle");
+    if (document.body.classList.contains("dark-mode")) {
+      button.innerHTML = "☀️ Light Mode";
+    } else {
+      button.innerHTML = "🌙 Dark Mode";
+    }
   }
-
-  // Set initial icon based on system preference
-  document.getElementById("icon").classList.add("sun-icon");
 </script>
+
