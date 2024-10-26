@@ -44,28 +44,28 @@
   }
 </style>
 
-<!-- Fancy Dark Mode Toggle Button -->
-<button onclick="toggleDarkMode()" id="darkModeToggle" style="position: fixed; top: 10px; right: 10px; padding: 10px 20px; border: none; border-radius: 20px; background-color: #333; color: #fff; font-weight: bold; cursor: pointer; transition: all 0.3s;">
-  🌙 Dark Mode
+<!-- Dark Mode Button -->
+<button onclick="toggleDarkMode()" id="darkModeButton" style="position: fixed; top: 10px; right: 10px; padding: 10px; border: none; background-color: transparent; cursor: pointer; font-size: 20px;">
+  🌙
 </button>
 
 <style>
-  /* Button style for light and dark modes */
-  .dark-mode #darkModeToggle {
-    background-color: #eee;
-    color: #333;
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
   }
 </style>
 
 <script>
   function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
-    const button = document.getElementById("darkModeToggle");
+    const button = document.getElementById("darkModeButton");
     if (document.body.classList.contains("dark-mode")) {
-      button.innerHTML = "☀️ Light Mode";
+      button.innerHTML = "☀️"; // Sun icon for light mode
     } else {
-      button.innerHTML = "🌙 Dark Mode";
+      button.innerHTML = "🌙"; // Moon icon for dark mode
     }
   }
 </script>
+
 
